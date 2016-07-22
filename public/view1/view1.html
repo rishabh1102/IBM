@@ -1,0 +1,45 @@
+
+<style>
+/* Adds borders for tabs */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+
+</style>
+
+<div class = "container">
+<h3 class="page-header">User Login/Registration Page</h3>
+	<div class="jumbotron">
+		<p>
+		Name:		
+		<br>
+		<input type="text" class="form-control" ng-model="name" placeholder="Enter Name"></input>
+		</p>
+		<p>
+		Username:
+		<br>
+		<input type="text" class="form-control" ng-model="username" placeholder="Enter Username" ></input>
+		</p>
+		<p>
+		Password:
+		<br>
+		<input type="password" class="form-control" ng-model="password" placeholder="Enter Password"></input>
+		</p><br>
+		<div class="control-group">
+			<button type="submit" class="btn btn-primary btn-lg" role="button" ng-click="registerUser()">Register</button>
+			or 
+			<button type="submit" class="btn btn-primary btn-lg" role="button" ng-click="loginUser()">Login </button>
+		</div>
+		<p>
+		{{deploy}}
+		</p>
+	</div>
+</div>
+	<!--  <script src="../bower_components/angular/angular.js"></script>
+

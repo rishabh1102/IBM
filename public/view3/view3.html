@@ -1,0 +1,50 @@
+<style>
+
+/* Adds borders for tabs */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+#camsource1 {
+    width: 300px;
+    height: 265px;
+    background-color: #666;
+}
+</style>
+
+<div class ="container">
+  <h3 class="page-header">Claim your token here</h3>
+  <div class="jumbotron">
+    
+    <p> Click a picture of the QR Code: </p>
+    <!-- <p> 
+      <input type="text" ng-model="tokenId">
+    </p> -->
+    <p>
+      <input type="file" capture="camera" accept="image/*" id="camsource" name="camsource">
+    </p>
+    <p>
+      <canvas id="qr-canvas" width="300" height="300" style="border:1px solid #d3d3d3;"></canvas>
+    </p>
+    <h4>Token ID:</h4>
+   <h4 id="qr-value" ng-model="claimTokenStatus"></h4>
+      <button type="submit" class="btn btn-default" role="button" ng-click="claimToken()">
+        {{claimButtonText}}
+      </button>
+    </p>
+    <p>
+      <button class="btn btn-default" role="button" ng-click="goToProfile()">
+        Back to Profile 
+      </button>
+    </p>
+    
+    <p>{{claimTokenStatus}}</p>
+  </div>
+</div>
+
+
